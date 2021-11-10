@@ -1,8 +1,4 @@
-import java.math.BigDecimal;
 import java.util.Scanner;
-
-import static java.lang.Math.pow;
-import static java.lang.Math.sqrt;
 
 public class Lesson3 {
 
@@ -25,6 +21,7 @@ public class Lesson3 {
         double c = scanner.nextInt();
 
         double D = (Math.pow(b, 2)) - (4 * a * c);
+        //возведение в степень надо делать через Math.pow или проще через b*b? как правильнее?
 
         if (D < 0) {
             System.out.println("Уравнение не имеет действительных корней!");
