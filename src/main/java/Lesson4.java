@@ -14,7 +14,7 @@ public class Lesson4 {
         String textMessage6 = "Вычисляю :";
         System.out.println(textMessage1);
 
-        //второй способ
+        //1й способ
         int x = scanner.nextInt();
         TimeUnit.SECONDS.sleep(2);
         System.out.println(textMessage5);
@@ -35,7 +35,7 @@ public class Lesson4 {
 }
 
 /*
-        //третий способ
+        //2й способ
         int x3 = scanner.nextInt(); //вводимое число
         int i3; // счетчик и корень числа
         if (x3 == 0) {
@@ -49,7 +49,7 @@ public class Lesson4 {
             }
         }
 
-        //четвертый способ
+        //3й способ
         int i4 = 0;
         int x4 = scanner.nextInt();
         while (i4 <= x4) {
@@ -60,7 +60,7 @@ public class Lesson4 {
                 i4++;
             }
         }
-        // пятый способ
+        // 4й способ
         int x5 = scanner.nextInt();
         int i5;
         for (i5 = x5; i5 >= 0; i5--) {
