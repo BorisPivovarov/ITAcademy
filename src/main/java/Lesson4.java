@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
-public class Lesson4_1 {
+public class Lesson4 {
     public static void main(String[] args) throws InterruptedException {
 
         Scanner scanner = new Scanner(System.in);
