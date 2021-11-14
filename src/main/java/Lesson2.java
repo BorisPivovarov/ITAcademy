@@ -4,18 +4,22 @@ import java.util.Locale;
 import java.util.Scanner;
 
 public class Lesson2 {
-
     public static void main(String[] args) {
+        String Message1 = "Введите значение переменной ";
 
         Scanner sc = new Scanner(System.in).useLocale(Locale.ENGLISH);
 
-        System.out.println("Введите значение первой переменной");
-
+        System.out.println(Message1 + 1);
         double a = sc.nextDouble();
 
-        System.out.println("Введите значение второй переменной");
-
+        System.out.println(Message1 + 2);
         double b = sc.nextDouble();
+        String Message2 = "Сумма ";
+        String Message4 = "Разность ";
+        String Message5 = "Произведение ";
+        String Message6 = "Деление ";
+        String Message3 = "чисел " + (a) + " и " + (b) + " = ";
+
 
         BigDecimal sum1 = new BigDecimal(a);
         BigDecimal sum2 = new BigDecimal(b);
@@ -35,20 +39,17 @@ public class Lesson2 {
         double res = a / b;
         String result = String.format("%.3f", res);
 
-
-        System.out.println("Сумма чисел " + (a) + " и " + (b) + " = " + (sum) + "\n" +
-                "Разность чисел " + (a) + " и " + (b) + " = " + (sub) + "\n" +
-                "Произведение чисел " + (a) + " и " + (b) + " = " + (multi) + "\n" +
-                "Деление чисел " + (a) + " и " + (b) + " = " + (result));
-
+        System.out.println(Message2 + Message3 + (sum) + "\n" +
+                Message4 + Message3 + (sub) + "\n" +
+                Message5 + Message3 + (multi) + "\n" +
+                Message6 + Message3 + (result));
 
         if (a > b) {
-            System.out.println("Число " + (a) + " больше числа " + (b) + " на " + (sub));
+            System.out.println((a) + " больше числа " + (b) + " на " + (sub));
         } else if (a < b) {
-            System.out.println("Число " + (a) + " меньше числа " + (b) + " на " + (subN)); //как сделать это через Math.abs(sub)???
+            System.out.println((a) + " меньше числа " + (b) + " на " + (subN));
         } else if (a == b) {
-            System.out.println("Число " + (a) + " равно числу " + (b));
+            System.out.println((a) + " равно числу " + (b));
         }
-
     }
 }
