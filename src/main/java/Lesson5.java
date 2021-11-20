@@ -6,9 +6,8 @@ public class Lesson5 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = getN(scanner);
-
         int result = getResult(n);
-        System.out.println( n + "-й член последовательности будет иметь значение: " + result);
+        System.out.println(n + "-й член последовательности будет иметь значение: " + result);
     }
 
     private static int getN(Scanner scanner) {
@@ -36,7 +35,6 @@ public class Lesson5 {
                 result = result + j;
                 j = result - j;
             }
-
         }
         return result;
     }
