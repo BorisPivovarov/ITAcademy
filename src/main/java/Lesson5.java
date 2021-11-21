@@ -28,7 +28,6 @@ public class Lesson5 {
     private static int getResult(int n) {
         int i = 0; //счетчик
         int j = 1;
-        int j1 = 0;
         int result = 0;
         while (n != i) {
             for (i = 0; i != n; i++) {
