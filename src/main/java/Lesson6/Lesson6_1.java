@@ -26,7 +26,6 @@ public class Lesson6_1 {
             }
             x = scanner.nextInt();
         } while (x <= 0);
-        //System.out.println("Количество элементов массива =  " + x);
         return x;
     }
 
