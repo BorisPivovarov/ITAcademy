@@ -8,11 +8,13 @@ public class Lesson6_1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int n = inputProtection(scanner);
-        double[] array = getInts(n);
+        double[] array = getDoubles(n);
         showArray(array);
-        maxValue(n, array);
-        minValue(n, array);
-        avgValue(n, array);
+        System.out.println("Максимальное значение " + maxValue(n, array) +
+                ", его индекс " + indexMax(n, array));
+        System.out.println("Минимальное значение " + minValue(n, array) +
+                ", его индекс " + indexMin(n, array));
+        System.out.println("Среднее значение: " + avgValue(n, array));
     }
 
     private static int inputProtection(Scanner scanner) {
@@ -29,47 +31,69 @@ public class Lesson6_1 {
         return x;
     }
 
-    private static void avgValue(int n, double[] array) {
+    private static double avgValue(int n, double[] array) {
         double avg = 0;
         int i;
         for (i = 0; i < n; i++) {
             avg = avg + array[i];
         }
         avg = avg / n;
-        System.out.println("Среднее значение: " + avg);
+        return avg;
     }
 
-    private static void minValue(int n, double[] array) {
+    private static double minValue(int n, double[] array) {
         double min = array[0];
-        int indexForAvg = 0;
         for (int i = 0; i < n; i++) {
             if (min > array[i]) {
                 min = array[i];
-                indexForAvg = i;
             }
         }
-        System.out.println("Миниимальное значение: " + min + ", его индекс " + indexForAvg);
+        return min;
     }
 
-    private static void maxValue(int n, double[] array) {
+    private static double maxValue(int n, double[] array) {
         double max = array[0];
         int i;
-        int indexForMax = 0;
         for (i = 0; i < n; i++) {
             if (max < array[i]) {
                 max = array[i];
-                indexForMax = i;
             }
         }
-        System.out.println("Максимальное значение: " + max + ", его индекс " + indexForMax);
+        return max;
     }
 
-    private static double[] getInts(int n) {
+    private static double[] getDoubles(int n) {
         double[] array = new double[n];
         for (int x = 0; x < n; x++) {
             array[x] = Math.random();
         }
         return array;
+    }
+
+    private static int indexMax(int n, double[] array) {
+        double max = array[0];
+        int i;
+        int indexMax = 0;
+        for (i = 0; i < n; i++) {
+            if (max < array[i]) {
+                max = array[i];
+                indexMax = i;
+            }
+        }
+        return indexMax;
+    }
+
+    private static int indexMin(int n, double[] array) {
+        double min = array[0];
+        int i;
+        int indexMin = 0;
+        for (i = 0; i < n; i++) {
+            if (min > array[i]) {
+                min = array[i];
+                indexMin = i;
+            }
+        }
+        return indexMin;
     }
 
     private static void showArray(double[] array) {
