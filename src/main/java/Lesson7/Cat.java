@@ -20,9 +20,6 @@ public class Cat {
     }
 
     public int getRun() {
-        if (run > 200) {
-            run = 200;
-        }
         return run;
     }
 
@@ -31,14 +28,24 @@ public class Cat {
     }
 
     public int getSwim() {
-        if (swim > 0) {
-            swim = 0;
-        }
         return swim;
     }
 
     public void setSwim(int swim) {
         this.swim = swim;
     }
-
+    public void run(int distance){
+        if (distance <= getRun()) {
+            System.out.println(getName() + " пробежал " + run + " метров");
+        } else {
+            System.out.println(getName() + " не сможет пробежать эту дистанцию");
+        }
+    }
+    public void swim(int distance){
+        if (distance <= getSwim()) {
+            System.out.println(getName() + " проплыл " + swim + " метров");
+        } else {
+            System.out.println(getName() + " не умеет плавать");
+        }
+    }
 }

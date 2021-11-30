@@ -20,9 +20,6 @@ public class Dog {
     }
 
     public int getRun() {
-        if (run > 200) {
-            run = 200;
-        }
         return run;
     }
 
@@ -31,13 +28,11 @@ public class Dog {
     }
 
     public int getSwim() {
-        if (swim > 10) {
-            swim = 10;
-        }
         return swim;
     }
 
     public void setSwim(int swim) {
         this.swim = swim;
     }
+
 }
