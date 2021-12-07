@@ -1,27 +1,9 @@
 package Lesson7;
 
 public class Animal {
-    private String category;
-    private String name;
-    private int run;
-    private int swim;
+    protected String name;
 
-    public Animal(String category, String name, int run, int swim) {
-        this.category = category;
+    protected Animal(String name) {
         this.name = name;
-        this.run = run;
-        this.swim = swim;
-    }
-
-    public int getRun() {
-        return run;
-    }
-
-    public int getSwim() {
-        return swim;
-    }
-
-    public String getCategoryName() {
-        return category + " " + name;
     }
 }

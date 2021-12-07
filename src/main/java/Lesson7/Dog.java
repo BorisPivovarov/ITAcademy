@@ -1,23 +1,28 @@
 package Lesson7;
 
 public class Dog extends Animal {
-    public Dog(String category, String name, int run, int swim) {
-        super(category, name, run, swim);
+    protected Dog(String name) {
+        super(name);
     }
 
+    private final int MAX_RUN = 500;
+    private final int MAX_SWIM = 10;
+    private final String CATEGORY = "Пёс";
+
     public void run(int distance) {
-        if (distance <= getRun()) {
-            System.out.println(getCategoryName() + " пробежал " + distance + " м.");
+        if (distance <= MAX_RUN) {
+            System.out.println(CATEGORY + " " + name + " пробежал " + distance + " м.");
         } else {
-            System.out.println(getCategoryName() + " не может пробежать эту дистанцию");
+            System.out.println(CATEGORY + " " + name + " не может пробежать эту дистанцию");
         }
     }
 
     public void swim(int distance) {
-        if (distance <= getSwim()) {
-            System.out.println(getCategoryName() + " проплыл " + distance + " м.");
+
+        if (distance <= MAX_SWIM) {
+            System.out.println(CATEGORY + " " + name + " проплыл " + distance + " м.");
         } else {
-            System.out.println(getCategoryName() + " не может проплыть эту дистанцию");
+            System.out.println(CATEGORY + " " + name + " не может проплыть эту дистанцию");
         }
     }
 }

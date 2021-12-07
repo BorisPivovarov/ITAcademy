@@ -1,19 +1,23 @@
 package Lesson7;
 
 public class Whale extends Animal {
-    public Whale(String category, String name, int run, int swim) {
-        super(category, name, run, swim);
+    protected Whale(String name) {
+        super(name);
     }
 
+    private final String MAX_RUN = " не умеет бегать, отсутствуют лапки";
+    private final int MAX_SWIM = 2_000;
+    private final String CATEGORY = "Кит";
+
     public void run(int distance) {
-        System.out.println(getCategoryName() + " не сможет пробежать эту дистанцию, отсутствуют лапки");
+        System.out.println(CATEGORY + " " + name + MAX_RUN);
     }
 
     public void swim(int distance) {
-        if (distance <= getSwim()) {
-            System.out.println(getCategoryName() + " проплыл " + distance + " м.");
+        if (distance <= MAX_SWIM) {
+            System.out.println(CATEGORY + " " + name + " проплыл " + distance + " м.");
         } else {
-            System.out.println(getCategoryName() + " просто устал и проплывёт позже");
+            System.out.println(CATEGORY + " " + name + " не может проплыть эту дистанцию");
         }
     }
 }
