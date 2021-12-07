@@ -1,5 +1,4 @@
 package Lesson9.Automobile.Car;
-
 import Lesson9.Automobile.Automobile;
 
 public class Car extends Automobile {
