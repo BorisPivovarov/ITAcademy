@@ -19,7 +19,7 @@ public class AutomobileRunner {
 
         Automobile[] automobiles = new Automobile[]{ural, gaz, uaz, kamaz, belaz, mazda, toyota, opel, skoda, lada};
         for (Automobile automobile : automobiles) {
-            automobile.move();
+            automobile.move(automobile.distance);
         }
     }
 }

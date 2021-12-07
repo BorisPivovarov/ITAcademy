@@ -1,7 +1,8 @@
 package Lesson9.Automobile.Car;
+
 import Lesson9.Automobile.Automobile;
 
-public class Car extends Automobile {
+public final class Car extends Automobile {
 
     private static final String TYPE = "Car";
     private static final int MAX_DISTANCE = 500;
@@ -11,7 +12,7 @@ public class Car extends Automobile {
     }
 
     @Override
-    public void move() {
+    public void move(int distance) {
         if (distance <= MAX_DISTANCE) {
             System.out.println(this.carName + ", тип автомобиля: " +
                     TYPE + ", проехал дистанцию: " + distance + " км.");
