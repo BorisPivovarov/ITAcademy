@@ -18,4 +18,5 @@ public final class Truck extends Automobile {
                     TYPE + ", проехал дистанцию: " + distance + " км.");
         }
     }
+
 }

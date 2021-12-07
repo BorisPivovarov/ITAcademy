@@ -10,4 +10,5 @@ public abstract class Automobile {
         this.carName = carName;
         this.distance = (int) (Math.random() * 1000);
     }
+
 }

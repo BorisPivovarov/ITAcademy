@@ -21,4 +21,5 @@ public class Car extends Automobile {
                     TYPE + " не сможет проехать дистанцию: " + distance + " км.");
         }
     }
+
 }
