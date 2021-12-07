@@ -1,9 +1,9 @@
 package Lesson8;
 
-import Lesson8.AnimalSpecification.AnimalsSpecification;
-import Lesson8.AnimalSpecification.Pet.Cat;
-import Lesson8.AnimalSpecification.Pet.Dog;
-import Lesson8.AnimalSpecification.Wild.Tiger;
+import Lesson8.Animal.AnimalsSpecification;
+import Lesson8.Animal.Pet.Cat;
+import Lesson8.Animal.Pet.Dog;
+import Lesson8.Animal.Wild.Tiger;
 
 public class AnimalLauncher {
     public static void main(String[] args) {

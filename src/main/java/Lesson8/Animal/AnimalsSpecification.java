@@ -1,4 +1,4 @@
-package Lesson8.AnimalSpecification;
+package Lesson8.Animal;
 
 public abstract class AnimalsSpecification {
 
@@ -7,7 +7,7 @@ public abstract class AnimalsSpecification {
 
     public abstract void voice();
 
-    public AnimalsSpecification(String nickName, String voiceOfAnimal) {
+    protected AnimalsSpecification(String nickName, String voiceOfAnimal) {
         this.nickName = nickName;
         this.voiceOfAnimal = voiceOfAnimal;
     }

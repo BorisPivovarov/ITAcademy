@@ -1,10 +1,10 @@
-package Lesson8.AnimalSpecification.Pet;
+package Lesson8.Animal.Pet;
 
 public class Cat extends Pet {
     private static final String CATEGORY = "Кошка";
 
     public Cat(String nickName, String voiceOfAnimal) {
-        super(nickName, voiceOfAnimal, PET);
+        super(nickName, voiceOfAnimal);
     }
 
     @Override

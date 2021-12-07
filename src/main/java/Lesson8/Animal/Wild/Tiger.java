@@ -1,10 +1,10 @@
-package Lesson8.AnimalSpecification.Wild;
+package Lesson8.Animal.Wild;
 
 public class Tiger extends Wild {
     private static final String CATEGORY = "Тигр";
 
     public Tiger(String nickName, String voiceOfAnimal) {
-        super(nickName, voiceOfAnimal, WILD);
+        super(nickName, voiceOfAnimal);
     }
 
     @Override
