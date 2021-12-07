@@ -5,7 +5,6 @@ import Lesson9.Automobile.Truck.Truck;
 
 public class AutomobileRunner {
     public static void main(String[] args) {
-
         Truck gaz = new Truck("Gaz");
         Truck uaz = new Truck("UAZ");
         Truck kamaz = new Truck("Kamaz");
