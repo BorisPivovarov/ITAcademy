@@ -23,12 +23,11 @@ public class Logger implements Runnable {
     private int counter = 1;
 
 
-
     @Override
     public void run() {
         System.out.printf("Начал работу поток %s\n", Thread.currentThread().getName());
         while (System.currentTimeMillis() <= currentTimeMilis + LIFE_TIME) {
-            try(FileWriter file = new FileWriter(fileName, true)) {
+            try (FileWriter file = new FileWriter(fileName, true)) {
                 file.write(lineToFile());
                 Thread.sleep(new Random().nextInt(5_000));
             } catch (IOException | InterruptedException ioE) {

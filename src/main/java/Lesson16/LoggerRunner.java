@@ -16,7 +16,7 @@ public class LoggerRunner {
     private static final String FILE_NAME = "D:\\test\\test.txt";
     private static final String FILE_DIR = "D:\\test";
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
 
         File dir = makeDir();
         makeFile(dir);
@@ -26,7 +26,7 @@ public class LoggerRunner {
             Logger logger = new Logger(loggerOptions[new Random().nextInt(loggerOptions.length)], FILE_NAME);
             return new Thread(logger);
         }).peek(Thread::start).collect(Collectors.toList());
-        for (Thread thread: threads) {
+        for (Thread thread : threads) {
             try (FileReader fileReader = new FileReader(FILE_NAME)) {
                 IOUtils.copy(fileReader, (OutputStream) System.out);
             }
