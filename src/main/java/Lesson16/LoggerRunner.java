@@ -27,9 +27,10 @@ public class LoggerRunner {
             return new Thread(logger);
         }).peek(Thread::start).collect(Collectors.toList());
         for (Thread thread : threads) {
-            try (FileReader fileReader = new FileReader(FILE_NAME)) {
-                IOUtils.copy(fileReader, (OutputStream) System.out);
-            }
+            thread.join();
+        }
+        try (FileReader fileReader = new FileReader(FILE_NAME)) {
+            IOUtils.copy(fileReader, (OutputStream) System.out);
         }
     }
 
