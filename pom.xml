@@ -22,6 +22,9 @@
         <json.version>20140107</json.version>
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
         <commons-io.version>2.5</commons-io.version>
+        <icu4j.version>70.1</icu4j.version>
+        <mysql-connector-java-plus.version>0.1.0</mysql-connector-java-plus.version>
+        <hibernate.version>3.5.0</hibernate.version>
     </properties>
 
     <dependencies>
@@ -29,6 +32,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.squirrel-sql.plugins</groupId>
+            <artifactId>hibernate</artifactId>
+            <version>${hibernate.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-io</groupId>
@@ -53,6 +61,11 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <groupId>com.github.spt-oss</groupId>
+            <artifactId>mysql-connector-java-plus</artifactId>
+            <version>${mysql-connector-java-plus.version}</version>
+        </dependency>
+        <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-databind.version}</version>
@@ -72,6 +85,11 @@
             <artifactId>junit</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.ibm.icu</groupId>
+            <artifactId>icu4j</artifactId>
+            <version>${icu4j.version}</version>
         </dependency>
         <dependency>
             <groupId>org.mockito</groupId>
