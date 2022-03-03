@@ -1,7 +1,7 @@
 package Lesson24.csv;
 
 
-import Lesson24.Book;
+import Lesson24.dto.Book;
 import com.opencsv.bean.CsvToBean;
 import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.experimental.UtilityClass;
