@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Вторая страница</title>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+    var speed = 60;
+    var pause = 1000;
+    var timerID = null;
+    var wireRunning = false;
+    var cc = [];
+
+    cc[0] = "IT Park!";
+    cc[1] = "Прум пум пум";
+    cc[2] = "!!!!";
+    cc[3] = "Сколько напишите, столько и будет отображено!";
+
+    var currentMessage = 0;
+    var offset = 0;
+    function stopWire() { if (wireRunning)
+        clearTimeout(timerID);
+        wireRunning = false
+    }
+    function startWire() {
+        stopWire();
+        showWire() }
+    function showWire() {
+        var text = cc[currentMessage];
+        if (offset < text.length) { if (text.charAt(offset) == " ")
+            offset++;
+            var partialMessage = text.substring(0, offset + 1);
+            document.wireForm.wireField.value = partialMessage;
+            offset++;
+            timerID = setTimeout("showWire()", speed);
+            wireRunning = true }
+        else {
+            offset = 0;
+            currentMessage++;
+            if (currentMessage == cc.length)
+                currentMessage = 0;
+            timerID = setTimeout("showWire()", pause);
+            wireRunning = true
+        }
+    }
+    </script>
+    <script src="webjars/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/logic.js"></script>
+    <style>
+        .it { font-size:20px; color:#14000a;border:#14000a 1px solid; padding:5px;margin: 5px }
+    </style>
+
+    <form name="wireForm">
+        <input class="it" name="wireField" value=" Тыкай, не бойся! " size="50" onfocus="if (!wireRunning) { startWire() }" type="text">
+    </form>
+</head>
+<body>
+    <div>
+        Вторая страница
+        <a href="/">Возврат обратно</a>
+    </div>
+    <div>
+
+    </div>
+
+</body>
+</html>

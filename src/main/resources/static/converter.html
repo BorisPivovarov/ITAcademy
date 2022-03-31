@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Конвертер валют</title>
+    <script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/converter.js"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+</head>
+<body>
+<div>
+    <div>
+        <label for="currentName">Введите название валюты</label>
+        <input id="currentName" type="text" name="currentName"/>
+    </div>
+    <div>
+        <button id="findRubInCurrency">Найти</button>
+    </div>
+    <div>
+            <span id="res">
+                Валюта не найдена
+            </span>
+    </div>
+    <div>
+        <label for="currencyValue">Введите количество валюты для конвертации:</label>
+        <input id="currencyValue" type="text" required="required"/>
+    </div>
+    <div>
+        <button id="convertValue">Расчитать</button>
+    </div>
+    <div>
+            <span id="result">
+                Расчета не было
+            </span>
+    </div>
+    <div id="labelText">
+        <a href="/">Возврат обратно</a>
+    </div>
+</div>
+</body>
+</html>

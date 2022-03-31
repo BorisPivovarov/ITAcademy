@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Калькулятор</title>
+    <script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<div>
+    <div class="convert_block_item">
+        <input type="number" id="val" placeholder="введите сумму..."/>
+        <select id="cur1">
+            <option>USD</option>
+            <option>EUR</option>
+            <option>RUB</option>
+        </select>
+    </div>
+    <div class="convert_block_item">
+        <div class="convert_result">= 00,000</div>
+        <select id="cur2">
+            <option>USD</option>
+            <option>EUR</option>
+            <option>RUB</option>
+        </select>
+    </div>
+    <div>
+        <label for="arg1">Введите первое слагаемое:</label>
+        <input id="arg1" type="text" name="arg1"/>
+    </div>
+
+    <div>
+        <label for="arg2">Введите второе слагаемое:</label>
+        <input id="arg2" type="text" name="arg2"/>
+    </div>
+
+    <div>
+        <button id="calculate">Рассчитать</button>
+    </div>
+
+    <div>
+            <span id="result">
+                Расчет пока не производился
+            </span>
+    </div>
+    <div id="labelText">
+        <a href="/">Возврат обратно</a>
+    </div>
+</div>
+</body>
+</html>
