@@ -11,19 +11,8 @@ $(function () {
                 $('#res').text('Курс: ' + rubInCurrency + ' рублей за 1 ' + currencyType);
             }
         })
-        // $('#res').text('Курс: ' + rubInCurrency + ' рублей за 1 ' + currencyType);
     })
     $('#convertValue').click(function () {
-        // let currencyType = $('#currentName').val();
-        // let rubInCurrency;
-        // $.ajax({
-        //     url: '/currency?code=' + currencyType,
-        //     type: 'GET',
-        //     success: function (data) {
-        //         rubInCurrency = data.value;
-        //         console.log('Текущий курс %s в рублях = %d', currencyType, rubInCurrency);
-        //     }
-        // })
         let cur;
         let currency = $('#currencyValue').val();
         if (!currency || isNaN(cur = parseFloat(currency)) || cur < 0) {

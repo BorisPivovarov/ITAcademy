@@ -5,16 +5,19 @@
     <title>Конвертер валют</title>
     <script src="/webjars/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/converter.js"></script>
-    <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/webjars/bootstrap/4.5.0/css/bootstrap.min.css"/>
 </head>
 <body>
+<h1>Конвертер валют</h1>
 <div>
     <div>
         <label for="currentName">Введите название валюты</label>
-        <input id="currentName" type="text" name="currentName"/>
     </div>
     <div>
-        <button id="findRubInCurrency">Найти</button>
+        <input id="currentName" type="text" name="currentName" style="width: 200px"/>
+    </div>
+    <div>
+        <button id="findRubInCurrency" style="width: 200px">Найти</button>
     </div>
     <div>
             <span id="res">
@@ -22,19 +25,21 @@
             </span>
     </div>
     <div>
-        <label for="currencyValue">Введите количество валюты для конвертации:</label>
-        <input id="currencyValue" type="text" required="required"/>
+        <label for="currencyValue">Введите количество валюты для конвертации</label>
     </div>
     <div>
-        <button id="convertValue">Расчитать</button>
+        <input id="currencyValue" type="text" required="required" style="width: 200px"/>
+    </div>
+    <div>
+        <button id="convertValue" style="width: 200px">Рассчитать</button>
     </div>
     <div>
             <span id="result">
                 Расчета не было
             </span>
     </div>
-    <div id="labelText">
-        <a href="/">Возврат обратно</a>
+    <div>
+        <a href="/"><img alt="back" src="images/back.png" style="width: 40px"></a>
     </div>
 </div>
 </body>

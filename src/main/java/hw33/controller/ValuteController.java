@@ -16,7 +16,7 @@ public class ValuteController {
 
     @GetMapping("/currency")
     public ValuteDto getValue(@RequestParam String code) {
-        return  new ValuteDto(code, valuteFetcher.getValuteByCode(code)
+        return new ValuteDto(code, valuteFetcher.getValuteByCode(code)
                 .orElseThrow(() -> new IllegalArgumentException
                         (String.format("Информации по валюте %s не найдено в системе", code))));
     }
