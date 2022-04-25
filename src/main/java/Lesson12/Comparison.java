@@ -7,9 +7,10 @@ public class Comparison {
     public Comparison(Object[][] arr) {
     }
 
-    public void ComparisonAndSum(String[][] a) throws MyArraySizeException, MyArrayDataException {
+    public void comparisonAndSum(String[][] a) throws MyArraySizeException, MyArrayDataException {
         int b = 4;
         int sum = 0;
+        int parseArg = 0;
 
         if (a.length == b && a[0].length == b && a[1].length == b && a[2].length == b && a[3].length == b) {
             x = true;
@@ -18,15 +19,15 @@ public class Comparison {
             throw new MyArraySizeException();
         }
 
-        for (int j = 0; j < a.length; j++) {
-            for (String[] strings : a) {
-                try {
-                    sum += (Integer.parseInt(strings[j]));
-                } catch (MyArrayDataException e) {
-                    System.out.println("Oops");
+        for (String[] strings : a) {
+            for (int j = 0; j < a.length; j++) {
+                    try {
+                        sum += (Integer.parseInt(strings[j]));
+                    } catch (MyArrayDataException e) {
+                        e.toString("Ошибочка");
+                    }
                 }
             }
-        }
         System.out.println(sum);
     }
 }

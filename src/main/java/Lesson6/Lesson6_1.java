@@ -15,6 +15,9 @@ public class Lesson6_1 {
         System.out.println("Минимальное значение " + minValue(n, array) +
                 ", его индекс " + indexMin(n, array));
         System.out.println("Среднее значение: " + avgValue(n, array));
+//        Pair pair1 = new Pair(maxValue(n, array), indexMax(n, array));
+//        Pair[] pairs = new Pair[] {pair1};
+//        System.out.println();
     }
 
     private static int inputProtection(Scanner scanner) {
@@ -100,4 +103,13 @@ public class Lesson6_1 {
         String intArrayString = Arrays.toString(array);
         System.out.println(intArrayString);
     }
+//    public static class Pair {
+//        double value;
+//        int index;
+//
+//        public Pair(double maxValue, int indexMax) {
+//            this.value = maxValue;
+//            this.index = indexMax;
+//        }
+//    }
 }

@@ -4,9 +4,11 @@ public class Lesson3 {
 
     public static void main(String[] args) {
 
+        String Message = "Введите коэффициент ";
+        String Message1 = " квадратного уравнения (a*x^2+b*x+c=0)";
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите первый коэффициент a квадратного уравнения (a*x^2+b*x+c=0)");
+        System.out.println(Message + "a" + Message1);
         int a = scanner.nextInt();
 
         if (a == 0) {
@@ -14,10 +16,10 @@ public class Lesson3 {
             return;
         }
 
-        System.out.println("Введите второй коэффициент b квадратного уравнения (a*x^2+b*x+c=0)");
+        System.out.println(Message + "b" + Message1);
         double b = scanner.nextInt();
 
-        System.out.println("Введите третий коэффициент c квадратного уравнения (a*x^2+b*x+c=0)");
+        System.out.println(Message + "c" + Message1);
         double c = scanner.nextInt();
 
         double D = (Math.pow(b, 2)) - (4 * a * c);
@@ -25,14 +27,17 @@ public class Lesson3 {
 
         if (D < 0) {
             System.out.println("Уравнение не имеет действительных корней!");
-        } else if (D > 0) {
+        } else {
+            double x3 = (-b + (Math.sqrt(D))) / (2 * a);
+            if (D > 0) {
 
-            double x1 = (-b + (Math.sqrt(D))) / (2 * a);
-            double x2 = (-b - (Math.sqrt(D))) / (2 * a);
-            System.out.println("Поздравляем, у нас будет два корня: " + x1 + " и " + x2);
-        } else if (D == 0) {
-            double x = (-b + (Math.sqrt(D))) / (2 * a);
-            System.out.println("Улов не большой, но есть один корень: " + x);
+                double x1 = x3;
+                double x2 = (-b - (Math.sqrt(D))) / (2 * a);
+                System.out.println("Поздравляем, у нас будет два корня: " + x1 + " и " + x2);
+            } else if (D == 0) {
+                double x = x3;
+                System.out.println("Улов не большой, но есть один корень: " + x);
+            }
         }
     }
 }

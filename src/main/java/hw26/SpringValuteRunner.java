@@ -1,15 +1,11 @@
 package hw26;
 
-import Lesson24.dto.AuthorDto;
-import Lesson24.jdbc.BookDb;
 import hw26.service.ValuteFetcher;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-import java.math.BigDecimal;
-import java.util.List;
 import java.util.Scanner;
 
 @Configuration
